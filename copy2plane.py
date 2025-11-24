@@ -1,8 +1,9 @@
 '''
 Created on 2025/11/23
-
+version 0.02
 @author: sue-t
 '''
+
 
 from pyhooked import Hook, KeyboardEvent
 import pyperclip
@@ -16,10 +17,10 @@ def handle_events(args):
                       or 'Rshift' in args.pressed_key) \
                  and ('Lcontrol' in args.pressed_key \
                       or 'Rcontrol' in args.pressed_key):
-            # print("shift+ctrl+V")
             src = pyperclip.paste()
-            # print(src)
+            # version0.02 タブ削除を追加
             dst = src.replace(',','') \
+                    .replace('\t','') \
                     .replace('\r\n','') \
                     .replace('\n','')
             pyperclip.copy(dst)
