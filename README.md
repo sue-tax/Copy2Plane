@@ -40,6 +40,8 @@ copy2planeImm.exe を起動します。
 
 copy2plane.jpg ファイルを、copy2planeImmTray.exe ファイルと同じフォルダに保存してください。
 
+加工したとき、終了するときに、メッセージを表示します。
+
 ### 使用方法
 
 copy2planeImmTray.exe を起動します。
