@@ -6,7 +6,7 @@ Excelから、達人シリーズに数字をコピーする際に使用するこ
 
 - copy2plane Ctrl+Shift+Vで加工する、終了はタスクマネージャーから操作
 - copy2planeImm 即座に自動加工する。終了は空のセル2つをコピー
-- copy2planeImmTask 即座に自動加工する。終了はタスクトレイからか、空のセル2つをコピー
+- copy2planeImmTray 即座に自動加工する。終了はタスクトレイからか、空のセル2つをコピー
 
 ## copy2plane
 
