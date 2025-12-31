@@ -1,6 +1,6 @@
 '''
 Created on 2025/11/24
-version 0.05
+version 0.06
 @author: sue-t
 '''
 from pystray import Icon, MenuItem, Menu
@@ -26,19 +26,23 @@ class taskTray:
                 MenuItem('加工', self.doProc),
                 MenuItem('終了', self.doExit),
         )
-        self.icon = Icon(name='copy2plane', title='copy2plane',
+        self.icon = Icon(name='copy2planeET',
+                title='copy2planeET',
                 icon=image, menu=menu)
 
     def paste(self, src, dst):
         while True:
             try:
                 pyperclip.copy(dst)
-                self.icon.notify(f"{src}\n->\n{dst}",
-                        "変換しました")
+                # self.icon.notify(f"{src}\n->\n{dst}",
+                #         "変換しました")
                 break
             except Exception as _:
                 time.sleep(0.1)
                 continue
+        self.icon.notify(f"{src}\n->\n{dst}",
+                "変換しました")
+        
 
     def doLower(self, _icon):
         src = pyperclip.paste()
